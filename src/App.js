@@ -7,13 +7,13 @@ function App() {
 
   const getData = async (search) => {
     if(search !== ""){
-      let res = await fetch(`http://www.omdbapi.com/?apikey=96434885&s=${search}`);
+      let res = await fetch(`https://www.omdbapi.com/?apikey=96434885&s=${search}`);
       let data = await res.json();
       console.log(data.Search)
       setArr(data.Search || [])
     }
     else if(search===""){
-      let res = await fetch(`http://www.omdbapi.com/?apikey=96434885&s=batman`);
+      let res = await fetch(`https://www.omdbapi.com/?apikey=96434885&s=batman`);
       let data = await res.json();
       console.log(data.Search)
       setArr(data.Search)
